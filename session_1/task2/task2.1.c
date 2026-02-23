@@ -29,7 +29,7 @@
 int main(int argc, char *argv[]) {
     float num1, num2;
     char operation;
-    float result;
+    float answer;
     
     // Check if the correct number of arguments is provided
     if (argc != 4) {
@@ -47,13 +47,30 @@ int main(int argc, char *argv[]) {
     
     // Complete your code here
 	switch(operation){
-		case :
+		case '+':
+            answer = (num1 + num2);
             break;
+        case '-':
+            answer = (num1 - num2);
+            break;
+        case 'x':
+            answer = (num1 * num2);
+            break;
+        case '/':
+            if (num2 == 0) {
+                printf("Error, division by zero\n");
+                answer = 0;
+                break;
+            } else {
+                answer = (num1 / num2);
+                break;
+            }
+            
 		default:
 			printf("Operation not defined!\n");
 	}
     
-    printf("Result: %.2f\n", result);
+    printf("Result: %.2f\n",answer);
     
     return 0;
 }

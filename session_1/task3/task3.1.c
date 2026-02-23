@@ -59,13 +59,25 @@ int main(void) {
     if (units <= 100) {
         bill = units * 2.0;
 		// to do
+    } else if ((units > 100) && (units <= 300)) {
+        bill = (100 * 2.0) + (units - 100) * 3.50;
+
+    } else {
+        bill = (100 * 2.0) + (200 * 3.50) + (units- 300) * 5.00;
     }
+    
 
     /* subtask 2: apply surcharge based on customer type */
 	// complete your code here
     switch (customerType) {
         case 1:
-            // to do
+            break;
+        case 2:
+            bill = (bill * 1.1);
+			break;
+
+        case 3:
+            bill = (bill * 1.2);
 			break;
 
         default:
