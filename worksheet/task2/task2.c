@@ -43,6 +43,9 @@ int main(void){
 		else if (hex[i] >= 'A' && hex[i] <= 'F'){
 			digit = hex[i] - 'A' + 10;
 		}
+		else if (hex[i] >= 'a' && hex[i] <= 'f'){
+			digit = hex[i] - 'a' + 10;
+		}
 
 		// prints error if not a valid hex digit
 
